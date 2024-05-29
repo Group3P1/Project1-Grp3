@@ -7,3 +7,8 @@
     color: rgb(69, 156, 255);
     text-shadow: ;
 }
+nav {
+    position: relative;
+    left: -90px;
+    background-color: #0d2755; /*Whatever color you want goes here, but in Hexadecimal form*/
+}
