@@ -7,3 +7,4 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
 }).then(function(data){
     console.log(data)
 })
+// happy
