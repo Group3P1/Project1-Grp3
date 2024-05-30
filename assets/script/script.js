@@ -16,3 +16,14 @@ fetch("https://api.api-ninjas.com/",{
 }).then(function(data){
     console.log(data)
 })
+
+
+// Nutrition api
+// fetch(" ", {
+
+// });
+
+// make button a variable to use in JS
+const RdmFoodBtn = document.getElementById("RdmMeal");
+const RdmWoBtn = document.getElementById("RdmWO");
+
