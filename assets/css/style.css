@@ -7,8 +7,17 @@
     color: rgb(38, 121, 216);
     text-shadow: 4px 5px #080808
 }
-
+main{
+    display: flex;
+    justify-content: space-around; 
+}
 .endurance {
+    height: 600px;
+    width: 200px;
+    border-width: 5px 5px;
+    border-style: outset;
+}
+.strength{
     height: 600px;
     width: 200px;
     border-width: 5px 5px;

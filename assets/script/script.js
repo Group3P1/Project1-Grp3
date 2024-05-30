@@ -8,9 +8,9 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
     console.log(data)
 })
 
-fetch("https://www.nutritionix.com/api",{
-    headers: { 'X-Api-Key': ''},
-    contentType: 'application/json',git 
+fetch("https://api.api-ninjas.com/",{
+    headers: { 'X-Api-Key': '6abbd1aa01c66ad0233cda2968c0b2ae'},
+    contentType: 'application/json',
 }).then(function(res){
     return res.json()
 }).then(function(data){
