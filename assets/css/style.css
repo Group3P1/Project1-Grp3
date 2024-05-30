@@ -24,3 +24,19 @@ main{
     border-style: outset;
 
 }
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer p{
+   margin-left: 10px;
+}
+#results{
+    width: 200px;
+    height: 100px;
+}
+div #workout-results{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+}
