@@ -10,6 +10,17 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
     console.log(data)
 })
 
+
+// Nutrition api
+// fetch(" ", {
+
+// });
+
+// make button a variable to use in JS
+const RdmFoodBtn = document.getElementById("RdmMeal");
+const RdmWoBtn = document.getElementById("RdmWO");
+
+
 // fetch("https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger",{
 //     headers: { 'X-Api-Key': '6abbd1aa01c66ad0233cda2968c0b2ae'},
 //     contentType: 'application/json',
@@ -29,3 +40,4 @@ var options = {
     'x-app-key': '6abbd1aa01c66ad0233cda2968c0b2ae'
   }
 };
+
