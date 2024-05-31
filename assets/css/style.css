@@ -50,3 +50,10 @@ div #workout-results{
     margin-left: 20px;
 >>>>>>> 4275cec50c0bfbc281298d4a88b9650c303de66d
 }
+.button-RdmWO {
+    float: right
+}
+.small-text {
+    font-size: smaller;
+    display: inline-block; /* or float: right; */
+}
