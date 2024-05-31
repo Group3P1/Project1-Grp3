@@ -31,13 +31,16 @@ const RdmWoBtn = document.getElementById("RdmWO");
 // })
 
 
-var options = {
-  'method': 'GET',
-  'url': 'https://trackapi.nutritionix.com/v2/search/instant/?query=(userResponse)',
-  'headers': {
-    'Content-Type': 'application/json',
-    'x-app-id': 'AP ID faeec5b8',
-    'x-app-key': '6abbd1aa01c66ad0233cda2968c0b2ae'
-  }
-};
+fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`,
+{
+    'headers': {
+        'Content-Type': 'application/json',
+        'x-app-id': 'faeec5b8',
+        'x-app-key': '6abbd1aa01c66ad0233cda2968c0b2ae'
+    }
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+})
 
