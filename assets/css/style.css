@@ -4,6 +4,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 30pt;
+<<<<<<< HEAD
     color: rgb(69, 156, 255);
     text-shadow: ;
 }
@@ -11,4 +12,41 @@ nav {
     position: relative;
     left: -90px;
     background-color: #0d2755; /*Whatever color you want goes here, but in Hexadecimal form*/
+=======
+    color: rgb(38, 121, 216);
+    text-shadow: 4px 5px #080808
+}
+main{
+    display: flex;
+    justify-content: space-evenly; 
+} 
+.endurance {
+    height: 600px;
+    width: 400px;
+    border-width: 5px 5px;
+    border-style: outset;
+}
+.strength{
+    height: 600px;
+    width: 400px;
+    border-width: 5px 5px;
+    border-style: outset;
+
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer p{
+   margin-left: 10px;
+}
+#results{
+    width: 200px;
+    height: 100px;
+}
+div #workout-results{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+>>>>>>> 4275cec50c0bfbc281298d4a88b9650c303de66d
 }
