@@ -1,5 +1,6 @@
 const userResponse = document.getElementById("userResponse").value
 
+
 // const workEl = document.getElementById 
 fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
@@ -13,7 +14,6 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
 
 
 // make button a variable to use in JS
-const RdmFoodBtn = document.getElementById("RdmMeal");
 const RdmWoBtn = document.getElementById("RdmWO");
 
 
@@ -29,4 +29,20 @@ fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`,
 }).then(function(data){
     console.log(data)
 })
+//button disappear and then appears the results (in progress)
+const invisibleResultsEl= document.getElementById('results')
+const resultsButtonEl = document.getElementById("workout-results")
+
+function disappear(){
+    invisibleResultsEl.style.display = 'none'
+}
+resultsButtonEl.addEventListener('click', disappear)
+
+// function appear(){
+//     const displayedResults = document.createElement('div')
+//     displayedResults.id = 'addedResults'
+//     displayedResults.className = 'border border-dark rounded'
+// }
+// resultsButtonEl.addEventListener('click', disappear)
+
 
