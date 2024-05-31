@@ -46,3 +46,7 @@ div #workout-results{
     font-size: smaller;
     display: inline-block; /* or float: right; */
 }
+#addedResults{
+    width: 500px;
+    height: 100px;
+}
