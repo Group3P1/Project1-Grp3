@@ -8,9 +8,8 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
     return res.json()
 }).then(function(data){
     console.log(data)
+   
 })
-
-
 // Nutrition api
 // fetch(" ", {
 
@@ -41,3 +40,114 @@ var options = {
   }
 };
 
+
+const cardioData = [];
+const olympic_weightliftingData = [];
+const plyometricsData = [];
+const powerliftingData = [];
+const strengthData = [];
+const stretchingData = [];
+const strongmanData = [];
+
+
+// Store api data as a array
+fetch("https://api.api-ninjas.com/v1/exercises?cardio",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let cardioData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?olympicWeightlifting",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let olympicWeightliftingData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?plyometrics",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let plyometricsData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?powerlifting",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let powerliftingData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?strength",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let strengthData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?stretching",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let stretchingData = data;
+    
+})
+
+fetch("https://api.api-ninjas.com/v1/exercises?strongman",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   
+    let strongmanData = data;
+    
+})
+
+const workOuts = [cardioData, olympic_weightliftingData, plyometricsData, powerliftingData, strengthData, strengthData, strongmanData];
+
+if(RdmWoBtn.onclick) {
+    for(let i = 0; i < 1; i++){
+        let i = workOuts;
+        console.log(i)
+        let randomWorkout = Math.random(i);
+        console.log(randomWorkout);
+    }
+    console.log('hello world')
+}
+
+
+// Convert array to a increasing iterative number
+
+// Use math.random or something to pick a random number from the array, the number just representing the workout information// when get random workout it will pop up a see results link bringing you to the results section on the webpage
