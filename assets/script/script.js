@@ -9,6 +9,9 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
 }).then(function(data){
     console.log(data)
 })
+<<<<<<< HEAD
+// happy
+=======
 
 
 // Nutrition api
@@ -44,3 +47,4 @@ fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`,
     console.log(data)
 })
 
+>>>>>>> 4275cec50c0bfbc281298d4a88b9650c303de66d
