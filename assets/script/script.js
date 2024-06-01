@@ -37,12 +37,13 @@ function disappear(){
     invisibleResultsEl.style.display = 'none'
 }
 resultsButtonEl.addEventListener('click', disappear)
-
-// function appear(){
-//     const displayedResults = document.createElement('div')
-//     displayedResults.id = 'addedResults'
-//     displayedResults.className = 'border border-dark rounded'
-// }
-// resultsButtonEl.addEventListener('click', disappear)
+if  (disappear = true){
+    function appear(){
+    const displayedResults = document.createElement('div')
+    displayedResults.id = 'addedResults'
+    displayedResults.className = 'border border-dark rounded'
+    
+    }
+}
 
 
