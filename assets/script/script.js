@@ -10,30 +10,40 @@ fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
 }).then(function(res){
     return res.json()
 }).then(function(data){
+    console.log(data)
    for(let i =0; i<data.length;i++){
-    const elemelon = document.createElement("li")
-    elemelon.classname = 'dropdown-item';
-    elemelon.innerText = data[i].name
+    const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
+    const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+    const ddBtn = document.createElement("button")//button containing list element 
+    ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+    ddBtn.id = [i] //assigns an unique id to the button 
+    ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+    elemelon.appendChild(ddBtn) 
     ddownEl2.appendChild(elemelon)
-   }
-})
+    console.log(ddownEl2)
+}})
 
-fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
+ fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
     contentType: 'application/json'
 }).then(function(res){
     return res.json()
 }).then(function(data){
+    console.log(data)
     const ddownEl1 = document.getElementById("dd1")
    for(let i =0; i<data.length;i++){
     const elemelon2 = document.createElement("li")
-    elemelon2.classname = 'dropdown-item';
-    elemelon2.innerText = data[i].name
+     const ddBtn2 = document.createElement("button")
+     ddBtn2.className = "dropdown-item"
+    ddBtn2.id = "0" + [i]
+    ddBtn2.innerText = data[i].name;
+    elemelon2.appendChild(ddBtn2)
     ddownEl1.appendChild(elemelon2)
-    console.log(elemelon2)
-
+    console.log(ddownEl1)
+    
    }
 })
+// const el = document.createElement('div').classList.add('foo');
 
 
 trim
