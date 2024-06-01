@@ -36,7 +36,7 @@ fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
 })
 
 
-
+trim
 
 // function isolateproperties(data)
 
@@ -64,6 +64,7 @@ function disappear(){
     invisibleResultsEl.style.display = 'none'
 }
 resultsButtonEl.addEventListener('click', disappear)
+addEventListener 
 if  (disappear = true){
     function appear(){
     const displayedResults = document.createElement('div')
