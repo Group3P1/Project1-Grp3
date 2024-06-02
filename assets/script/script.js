@@ -141,9 +141,10 @@ if(RdmWoBtn.onclick) {
     for(let i = 0; i < 1; i++){
         let i = workOuts;
         console.log(i)
-        let randomWorkout = Math.random(i);
-        console.log(randomWorkout);
+        
     }
+    let randomWorkout = Math.random(i);
+        console.log(randomWorkout);
     console.log('hello world')
 }
 
