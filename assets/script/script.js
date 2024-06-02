@@ -98,6 +98,7 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 const getFood = function() {
 
+
 fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=(input)`, 
 {
     'headers': {
@@ -113,7 +114,7 @@ for(let i = 0; i < data.branded.length; i++) {
     console.log(data.branded[i]);
 }
 
-})
+})}
 
     resultsButtonEl.addEventListener('click', appear)
 
