@@ -83,7 +83,7 @@ function appear(){
     
 }
 
-resultsButtonEl.addEventListener('click', disappear)
+resultsButtonEl.addEventListener('click', appear)
 
 // function appear(){
 //     const displayedResults = document.createElement('div')
