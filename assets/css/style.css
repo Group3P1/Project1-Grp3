@@ -13,7 +13,9 @@ header {
     font-style: normal;
     font-size: 20pt;
     color: rgb(38, 121, 216);
-    text-shadow: 4px 5px #080808
+    text-shadow: 4px 5px #080808;
+    padding: 10px;
+    
 }
 
 
@@ -86,8 +88,8 @@ div #workout-results{
     border-radius: 5px;
 }
 #searchInput{
+}
+#endurance{
 
-    margin-top: 20px;
- 
 }
 
