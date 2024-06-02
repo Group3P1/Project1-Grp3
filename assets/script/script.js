@@ -130,6 +130,22 @@ const getFood = function()
 }
 resultsButtonEl.addEventListener('click', appear);
 
+// add event listener search button to type food of choice
+searchButton.addEventListener('click', getFood);
+//     // get the search input value
+//     const searchTerm = input.value;
+//     // log what the user requests to find nutrient info for  
+    // console.log();
+//   };
+  
+  // add event listener to the input to search on Enter keypress
+//   searchInput.addEventListener('keyup', function(event) {
+//     if (event.keyCode === 13) {
+//       // simulate a button click to trigger the search
+//       searchButton.addEventListener('click');
+//     }
+//   });
+
 // make button a variable to use in JS
 const cardioButton = document.getElementById("cardioButton");
 
