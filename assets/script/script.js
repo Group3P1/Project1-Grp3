@@ -48,94 +48,101 @@ const powerliftingData = [];
 const strengthData = [];
 const stretchingData = [];
 const strongmanData = [];
-
+// use for loop print data then push into array
 
 // Store api data as a array
-fetch("https://api.api-ninjas.com/v1/exercises?cardio",{
+fetch("https://api.api-ninjas.com/v1/exercises?cardio=",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
     contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
-   
-    let cardioData = data;
-    
+}).then(response => {
+    if (!response.ok) {
+        throw new error('Network response was not ok')
+    }
+    return response.json();
 })
-
-fetch("https://api.api-ninjas.com/v1/exercises?olympicWeightlifting",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
+.then(data => {
    
-    let olympicWeightliftingData = data;
-    
-})
-
-fetch("https://api.api-ninjas.com/v1/exercises?plyometrics",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
    
-    let plyometricsData = data;
-    
+    cardioData.push(data);
+    console.log(cardioData);
 })
+.catch(error => {
+    console.log('There was a problem fetching the data: ', error);
+});
 
-fetch("https://api.api-ninjas.com/v1/exercises?powerlifting",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
+// fetch("https://api.api-ninjas.com/v1/exercises?olympicWeightlifting=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
    
-    let powerliftingData = data;
+//     let olympicWeightliftingData = data;
     
-})
+// })
 
-fetch("https://api.api-ninjas.com/v1/exercises?strength",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
+// fetch("https://api.api-ninjas.com/v1/exercises?plyometrics=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
    
-    let strengthData = data;
+//     let plyometricsData = data;
     
-})
+// })
 
-fetch("https://api.api-ninjas.com/v1/exercises?stretching",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
+// fetch("https://api.api-ninjas.com/v1/exercises?powerlifting=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
    
-    let stretchingData = data;
+//     let powerliftingData = data;
     
-})
+// })
 
-fetch("https://api.api-ninjas.com/v1/exercises?strongman",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
+// fetch("https://api.api-ninjas.com/v1/exercises?strength=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
    
-    let strongmanData = data;
+//     let strengthData = data;
     
-})
+// })
 
-const workOuts = [cardioData, olympic_weightliftingData, plyometricsData, powerliftingData, strengthData, strengthData, strongmanData];
+// fetch("https://api.api-ninjas.com/v1/exercises?stretching=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
+   
+//     let stretchingData = data;
+    
+// })
+
+// fetch("https://api.api-ninjas.com/v1/exercises?strongman=",{
+//     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+//     contentType: 'application/json'
+// }).then(function(res){
+//     return res.json()
+// }).then(function(data){
+//     console.log(data)
+   
+//     let strongmanData = data;
+    
+// })
+
+// const workOuts = [cardioData, olympic_weightliftingData, plyometricsData, powerliftingData, strengthData, strengthData, strongmanData];
 
 if(RdmWoBtn.onclick) {
     for(let i = 0; i < 1; i++){
