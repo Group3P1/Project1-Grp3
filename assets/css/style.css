@@ -1,39 +1,52 @@
 body {
-    display: inline-block;
+    justify-content: center;
 }
 
-.Page-logo{
+header {
+    display: inline;
+}
+
+.Page-logo {
+    width: fit-content;
     font-family: "Jaro";
     font-weight: 400;
     font-style: normal;
-    font-size: 50pt;
+    font-size: 20pt;
     color: rgb(38, 121, 216);
     text-shadow: 4px 5px #080808
 }
 
 
-/* main{
+main{
     display: flex;
     justify-content: space-evenly; 
-}  */
+} 
 
 .endurance {
-    height: 600px;
+    height: auto;
+    width: 400px;
+    border-width: 5px 5px;
+    border-style: outset;
+    
+}
+
+.strength{
+    height: auto;
     width: 400px;
     border-width: 5px 5px;
     border-style: outset;
 }
-
-.strength{
-    height: 600px;
-    width: 400px;
-    border-width: 5px 5px;
-    border-style: outset;
+img {
+    display: block;
+    align-content: center;
+    width: 280px;
+    height: 250px;
 }
 
 li {
     list-style-type: none;
 }
+
 
 footer{
     display: flex;
