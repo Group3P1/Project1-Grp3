@@ -128,6 +128,7 @@ const getFood = function()
         }
     })
 }
+resultsButtonEl.addEventListener('click', appear);
 
 // make button a variable to use in JS
 const cardioButton = document.getElementById("cardioButton");
@@ -170,7 +171,7 @@ cardioButton.addEventListener('click', function(){
     //test that button click works
     console.log("hello console")
     // need to make it where when clicking the button it generates a random workout from that workout type 
-    
+
 })
 // fetch("https://api.api-ninjas.com/v1/exercises?olympicWeightlifting=",{
 //     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
