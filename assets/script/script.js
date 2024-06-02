@@ -2,9 +2,19 @@ const userResponse = document.getElementById("userResponse").value
 const ddownEl1 = document.getElementById("dd1")
 const ddownEl2 = document.getElementById("dd2")
 
+const selectChangeHandler = function(instructions){
+   const workoutResults = document.getElementById('endurance')
 
+    const allWorkouts = document.createElement('p')
+    workoutResults.appendChild(allWorkouts)
+    allWorkouts.innerText = instructions
+    // console.log(instructions)
+    // console.log("hello")
 
-fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
+}
+const enduranceSelection = function(){
+   
+fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
     contentType: 'application/json'
 }).then(function(res){
@@ -12,43 +22,51 @@ fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
 }).then(function(data){
     console.log(data)
    for(let i =0; i<data.length;i++){
-    const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
+    const ddownEl1 = document.getElementById("dd1")//gets dropdown menu from HTML
     const elemelon = document.createElement("li")//creates list element within dropdown for each workout
     const ddBtn = document.createElement("button")//button containing list element 
     ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
     ddBtn.id = [i] //assigns an unique id to the button 
     ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
     elemelon.appendChild(ddBtn) 
-    ddownEl2.appendChild(elemelon)
-    console.log(ddownEl2)
-}})
-
- fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
-    const ddownEl1 = document.getElementById("dd1")
-   for(let i =0; i<data.length;i++){
-    const elemelon2 = document.createElement("li")
-     const ddBtn2 = document.createElement("button")
-     ddBtn2.className = "dropdown-item"
-    ddBtn2.id = "0" + [i]
-    ddBtn2.innerText = data[i].name;
-    elemelon2.appendChild(ddBtn2)
-    ddownEl1.appendChild(elemelon2)
+    ddownEl1.appendChild(elemelon)
     console.log(ddownEl1)
-    
-   }
-})
-// const el = document.createElement('div').classList.add('foo');
+    const listItem = document.getElementById(ddBtn.id)
+    const selectedData = data[i].instructions
+    listItem.addEventListener('click', function(){
+        selectChangeHandler(selectedData)
+    })
+   
+   
+}})}
+enduranceSelection()
 
 
+const strengthSelection = function(){
+    fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
+        headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+        contentType: 'application/json'
+    }).then(function(res){
+        return res.json()
+    }).then(function(data){
+        console.log(data)
+       for(let i =0; i<data.length;i++){
+        const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
+        const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+        const ddBtn = document.createElement("button")//button containing list element 
+        ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+        ddBtn.id = [i] //assigns an unique id to the button 
+        ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+        elemelon.appendChild(ddBtn) 
+        ddownEl2.appendChild(elemelon)
+        console.log(ddownEl2)
+       const selection = addEventListener('select', ddownEl2)
+       
+    }})
+}
 
+addEventListener('change',strengthSelection )
 
-// function isolateproperties(data)
 
 // make button a variable to use in JS
 const RdmWoBtn = document.getElementById("RdmWO");
@@ -70,16 +88,11 @@ fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`,
 const invisibleResultsEl= document.getElementById('results')
 const resultsButtonEl = document.getElementById("workout-results")
 
-function disappear(){
+function appear(){
     invisibleResultsEl.style.display = 'none'
+    const workoutResults = document.getElementById('endurance')
+    workoutResults.className ='d-block'
+    
 }
-resultsButtonEl.addEventListener('click', disappear)
-
-// function appear(){
-//     const displayedResults = document.createElement('div')
-//     displayedResults.id = 'addedResults'
-//     displayedResults.className = 'border border-dark rounded'
-// }
-// resultsButtonEl.addEventListener('click', disappear)
-
+    resultsButtonEl.addEventListener('click', appear)
 
