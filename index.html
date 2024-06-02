@@ -23,11 +23,24 @@
         <div class="Page-logo">
           <h1>GitFit</h1>
             <!-- link to page name -->
+            <div>Get this fitness routine that fits YOUR needs!</div>
+            <span class="small-text">Additional text</span>
         </div>
         <!-- Id to make the variable -->
           <!-- Links so that I can make the page jump to the results below the picture content -->
-          <a><button id="RdmWO">Make a Random Workout</button></a> 
-          <!-- <a><button id="RdmMeal">Make a Random Meal</button></a> -->
+          
+          <section id="RdmWO">
+            Make a Random Workout
+            <select>
+              <option value="cardio"><button id="cardioButton">cardio</button></option>
+              <option value="OlympicWeightlifting"><button></button>OlympicWeightlifting</button></option>
+              <option value="Plyometrics"><button></button>Plyometrics</button></option>
+              <option value="strength"><button></button>strength</button></option>
+              <option value="stretching"><button></button>stretching</button></option>
+              <option value="strongman"><button></button>strongman</button></option>
+            </select>
+          </section>
+         
       </header>
     </nav>
     <!--placed main tag and classes for sections shown in wireframe-->
@@ -38,23 +51,24 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Dropdown button
         </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul id="dd1" class="dropdown-menu">
+          
         </ul>
         </div>
          <ul>
-          <li class="images" id="img1">
-            <img src="./assets/man stretching.jpg" alt="">
+
+          <!-- <li class="images" id="img1">
+            <img src="./assets/man stretching.jpg" alt="Phot of a man stretching his legs">
           </li>
           <li class="images" id="img2">
-            <img src="./assets/Plyometrics.jpg" alt="">
+            <img src="./assets/Plyometrics.jpg" alt="Photo of a man jumping up on a box">
           </li>
           <li class="images" id="img3">
-            <img src="./assets/yoga.jpg" alt="">
+            <img src="./assets/yoga.jpg" alt="Photo of a group of men and women in a yoga class">
           </li>
         </ul>
+        </div>
+          -->
       </section>
       <section class="strength">
        <h2>Strength</h2>
@@ -62,29 +76,29 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Dropdown button
         </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul id=dd2 class="dropdown-menu">
         </ul>
         <div>
           
         </div>
        </div>
         <ul>
-        <li class="images"  id="img4">
-          <img src="./assets/dumbells.jpg" alt="">
-        </li>
-        <li class="images" id="img5">
-          <img src="./assets/kettlebells.jpg" alt="">
-        </li>
-        <li class="images" id="img6">
-          <img src="./assets/weight lift.jpg" alt="">
-        </li>
-        </ul>
+          <!-- <li class="images"  id="img4">
+            <img src="./assets/dumbells.jpg" alt="Photo of a woman and a dumbell beside her">
+          </li>
+          <li class="images" id="img5">
+            <img src="./assets/kettlebells.jpg" alt="Photo of a man and woman lifting kettlebells">
+          </li>
+          <li class="images" id="img6">
+            <img src="./assets/weight lift.jpg" alt="Photo of a woman and man doing a deadlift">
+          </li>
+          </ul>
+        -->
+       </div>
+       
       </section>
       
-      <input id="userResponse"> </input>
+      <section id="userResponse"> </section>
   
     </main>
     <footer>
@@ -93,6 +107,16 @@
           Display Workout Results
         </p>
         <button type="button" class=" btn btn-primary" id="workout-results"> Workout Results</button>
+        <section id="WoResult1">Random workout results</section>
+      </div>
+      <input type="text" id="searchInput">
+      <button id="searchButton">Search</button>
+
+      <div class="d-none" id= "endurance">
+
+      </div>
+      <div id = "strength">
+
       </div>
 
     </footer>

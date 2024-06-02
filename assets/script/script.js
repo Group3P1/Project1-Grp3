@@ -1,46 +1,138 @@
-const userResponse = document.getElementById("userResponse").value
 
-// const workEl = document.getElementById 
-fetch("https://api.api-ninjas.com/v1/exercises?muscle=biceps",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
-   
-})
-// Nutrition api
-// fetch(" ", {
+const ddownEl1 = document.getElementById("dd1")
+const ddownEl2 = document.getElementById("dd2")
 
-// });
+const selectChangeHandler = function(instructions){
+   const workoutResults = document.getElementById('endurance')
+
+    const allWorkouts = document.createElement('p')
+    workoutResults.appendChild(allWorkouts)
+    allWorkouts.innerText = instructions
+    // console.log(instructions)
+    // console.log("hello")
+
+}
+
+const enduranceSelection = function(){
+    fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
+        headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+        contentType: 'application/json'
+    }).then(function(res){
+        return res.json()
+    }).then(function(data){
+        console.log(data)
+        for(let i =0; i<data.length;i++){
+            const ddownEl1 = document.getElementById("dd1")//gets dropdown menu from HTML
+            const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+            const ddBtn = document.createElement("button")//button containing list element 
+            ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+            ddBtn.id = [i] //assigns an unique id to the button 
+            ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+            elemelon.appendChild(ddBtn) 
+            ddownEl1.appendChild(elemelon)
+            console.log(ddownEl1)
+            const listItem = document.getElementById(ddBtn.id)
+            const selectedData = data[i].instructions
+            listItem.addEventListener('click', function(){
+                selectChangeHandler(selectedData)
+            })
+        }}
+    )}
+
+enduranceSelection()
+
+const selectChangeHandler2 = function(instructions){
+    const workoutResults = document.getElementById('strength')
+ 
+     const allWorkouts = document.createElement('p')
+     workoutResults.appendChild(allWorkouts)
+     allWorkouts.innerText = instructions
+     // console.log(instructions)
+     // console.log("hello")
+ 
+ }
+const strengthSelection = function(){
+    fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
+        headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+        contentType: 'application/json'
+    }).then(function(res){
+        return res.json()
+    }).then(function(data){
+        console.log(data)
+        for(let i =0; i<data.length;i++){
+            const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
+            const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+            const ddBtn = document.createElement("button")//button containing list element 
+            ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+            ddBtn.id = [i] //assigns an unique id to the button 
+            ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+            elemelon.appendChild(ddBtn) 
+            ddownEl2.appendChild(elemelon)
+            console.log(ddownEl1)
+            const listItem = document.getElementById(ddBtn.id)
+            const selectedData = data[i].instructions
+            listItem.addEventListener('click', function(){
+                selectChangeHandler(selectedData)
+            })
+           
+           
+        }}
+)}
+
+strengthSelection()
+
+
+
+
+
+//button disappear and then appears the results (in progress)
+const invisibleResultsEl= document.getElementById('results')
+const resultsButtonEl = document.getElementById("workout-results")
+
+function appear(){
+    invisibleResultsEl.style.display = 'none'
+    const workoutResults = document.getElementById('endurance')
+    workoutResults.className ='d-block'
+    
+}
+
+resultsButtonEl.addEventListener('click', appear)
+
+// function appear(){
+//     const displayedResults = document.createElement('div')
+//     displayedResults.id = 'addedResults'
+//     displayedResults.className = 'border border-dark rounded'
+// }
+// resultsButtonEl.addEventListener('click', disappear)
+
+// made fetch for food selector and added for loop (trying to make it work)
+const input = document.getElementById("userResponse");
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const getFood = function() 
+{
+
+    fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=(input)`, 
+    {
+        'headers': {
+            'Content-Type': 'application/json',
+            'x-app-id': 'faeec5b8',
+            'x-app-key': '6abbd1aa01c66ad0233cda2968c0b2ae'
+        }
+    }).then(function(res){
+        return res.json();
+    }).then(function(data) {  
+        console.log(data);
+        for(let i = 0; i < data.branded.length; i++) {
+        console.log(data.branded[i]);
+        }
+    })
+}
 
 // make button a variable to use in JS
-const RdmFoodBtn = document.getElementById("RdmMeal");
-const RdmWoBtn = document.getElementById("RdmWO");
+const cardioButton = document.getElementById("cardioButton");
 
-
-// fetch("https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger",{
-//     headers: { 'X-Api-Key': '6abbd1aa01c66ad0233cda2968c0b2ae'},
-//     contentType: 'application/json',
-// }).then(function(res){
-//     return res.json()
-// }).then(function(data){
-//     console.log(data)
-// })
-
-
-var options = {
-  'method': 'GET',
-  'url': 'https://trackapi.nutritionix.com/v2/search/instant/?query=(userResponse)',
-  'headers': {
-    'Content-Type': 'application/json',
-    'x-app-id': 'AP ID faeec5b8',
-    'x-app-key': '6abbd1aa01c66ad0233cda2968c0b2ae'
-  }
-};
-
-
+// Array for specific workout types, Want to see a random WorkOut from each respective type when clicking on button for said Work-out type
 const cardioData = [];
 const olympic_weightliftingData = [];
 const plyometricsData = [];
@@ -55,21 +147,31 @@ fetch("https://api.api-ninjas.com/v1/exercises?cardio=",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
     contentType: 'application/json'
 }).then(response => {
+    // error checking
     if (!response.ok) {
         throw new error('Network response was not ok')
     }
     return response.json();
 })
 .then(data => {
-   
-   
+    // pushing WorkOut type data into the array
     cardioData.push(data);
+    // logging that it is in that array
     console.log(cardioData);
 })
+// more error checking
 .catch(error => {
     console.log('There was a problem fetching the data: ', error);
 });
 
+
+// got random button to react to being clicked 
+cardioButton.addEventListener('click', function(){
+    //test that button click works
+    console.log("hello console")
+    // need to make it where when clicking the button it generates a random workout from that workout type 
+    
+})
 // fetch("https://api.api-ninjas.com/v1/exercises?olympicWeightlifting=",{
 //     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
 //     contentType: 'application/json'
