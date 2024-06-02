@@ -1,3 +1,49 @@
+.Page-logo{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: fit-content;
+    color: rgb(38, 121, 216);
+    text-shadow: 4px 5px #080808;
+    padding: 10px;
+
+    background: white;
+    text-align: center;
+    width: fit-content;
+    font-optical-sizing: auto;
+    font-size: 125px;
+}
+#GitFitNav {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+    
+}
+#GitFitNav img {
+        height: auto;  
+        width: 75px;
+ }
+    
+#GitFitNav h3 {
+        margin-left: 5%;
+        border: 5px solid rgb(188, 181, 181);
+        padding: 11px;
+        text-align: center;
+        width: fit-content;
+        max-height: fit-content;
+}
+    
+#RdmWO {
+        max-height: fit-content;
+        display: flex;
+        align-content: center;
+        display: inline;
+        padding: 20px;
+        text-decoration-line: underline;
+        font-size: large ;
+        font-weight: bold;
+}
 body {
     justify-content: center;
 }
@@ -5,19 +51,6 @@ body {
 header {
     display: inline;
 }
-
-.Page-logo {
-    width: fit-content;
-    font-family: "Jaro";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20pt;
-    color: rgb(38, 121, 216);
-    text-shadow: 4px 5px #080808;
-    padding: 10px;
-    
-}
-
 
 main{
     display: flex;
@@ -37,13 +70,14 @@ main{
     width: 400px;
     border-width: 5px 5px;
     border-style: outset;
+
 }
-img {
+main img {
     display: block;
     align-content: center;
     width: 280px;
     height: 250px;
-}
+} 
 
 li {
     list-style-type: none;
@@ -51,11 +85,12 @@ li {
 
 
 footer{
+    
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-top: 30px;
-  
+    
 }
 
 #footerP{
