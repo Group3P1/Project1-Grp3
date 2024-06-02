@@ -82,7 +82,21 @@ function appear(){
     workoutResults.className ='d-block'
     
 }
-    resultsButtonEl.addEventListener('click', appear)
+
+resultsButtonEl.addEventListener('click', disappear)
+
+// function appear(){
+//     const displayedResults = document.createElement('div')
+//     displayedResults.id = 'addedResults'
+//     displayedResults.className = 'border border-dark rounded'
+// }
+// resultsButtonEl.addEventListener('click', disappear)
+
+// made fetch for food selector and added for loop (trying to make it work)
+const input = document.getElementById("userResponse");
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const getFood = function() {
 
 fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=(input)`, 
 {
@@ -100,6 +114,9 @@ for(let i = 0; i < data.branded.length; i++) {
 }
 
 })
+
+    resultsButtonEl.addEventListener('click', appear)
+
 
 // add event listener search button to type food of choice
 searchButton.addEventListener('click', getFood);
