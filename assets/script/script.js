@@ -41,7 +41,16 @@ fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
 }})}
 enduranceSelection()
 
-
+const selectChangeHandler2 = function(instructions){
+    const workoutResults = document.getElementById('strength')
+ 
+     const allWorkouts = document.createElement('p')
+     workoutResults.appendChild(allWorkouts)
+     allWorkouts.innerText = instructions
+     // console.log(instructions)
+     // console.log("hello")
+ 
+ }
 const strengthSelection = function(){
     fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
         headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
@@ -50,23 +59,25 @@ const strengthSelection = function(){
         return res.json()
     }).then(function(data){
         console.log(data)
-       for(let i =0; i<data.length;i++){
-        const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
-        const elemelon = document.createElement("li")//creates list element within dropdown for each workout
-        const ddBtn = document.createElement("button")//button containing list element 
-        ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
-        ddBtn.id = [i] //assigns an unique id to the button 
-        ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
-        elemelon.appendChild(ddBtn) 
-        ddownEl2.appendChild(elemelon)
-        console.log(ddownEl2)
-       const selection = addEventListener('select', ddownEl2)
-       
-    }})
-}
-
-addEventListener('change',strengthSelection )
-
+        for(let i =0; i<data.length;i++){
+            const ddownEl2 = document.getElementById("dd2")//gets dropdown menu from HTML
+            const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+            const ddBtn = document.createElement("button")//button containing list element 
+            ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+            ddBtn.id = [i] //assigns an unique id to the button 
+            ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+            elemelon.appendChild(ddBtn) 
+            ddownEl2.appendChild(elemelon)
+            console.log(ddownEl1)
+            const listItem = document.getElementById(ddBtn.id)
+            const selectedData = data[i].instructions
+            listItem.addEventListener('click', function(){
+                selectChangeHandler(selectedData)
+            })
+           
+           
+        }})}
+        strengthSelection()
 
 // make button a variable to use in JS
 const RdmWoBtn = document.getElementById("RdmWO");
