@@ -6,46 +6,59 @@
     color: rgb(38, 121, 216);
     text-shadow: 4px 5px #080808
 }
+
 main{
     display: flex;
     justify-content: space-evenly; 
 } 
+
 .endurance {
     height: 600px;
     width: 400px;
     border-width: 5px 5px;
     border-style: outset;
 }
+
 .strength{
     height: 600px;
     width: 400px;
     border-width: 5px 5px;
     border-style: outset;
-
 }
+
+li {
+    list-style-type: none;
+}
+
 footer{
     display: flex;
     justify-content: center;
 }
+
 footer p{
    margin-left: 10px;
 }
+
 #results{
     width: 200px;
     height: 100px;
 }
+
 div #workout-results{
     width: 150px;
     height: 40px;
     margin-left: 20px;
 }
+
 .button-RdmWO {
     float: right
 }
+
 .small-text {
     font-size: smaller;
     display: inline-block; /* or float: right; */
 }
+
 #addedResults{
     width: 500px;
     height: 100px;
