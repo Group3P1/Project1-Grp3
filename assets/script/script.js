@@ -4,6 +4,25 @@ const ddownEl2 = document.getElementById("dd2")
 
 
 
+fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
+    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
+    contentType: 'application/json'
+}).then(function(res){
+    return res.json()
+}).then(function(data){
+    console.log(data)
+   for(let i =0; i<data.length;i++){
+    const ddownEl1 = document.getElementById("dd1")//gets dropdown menu from HTML
+    const elemelon = document.createElement("li")//creates list element within dropdown for each workout
+    const ddBtn = document.createElement("button")//button containing list element 
+    ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
+    ddBtn.id = [i] //assigns an unique id to the button 
+    ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
+    elemelon.appendChild(ddBtn) 
+    ddownEl1.appendChild(elemelon)
+    console.log(ddownEl1)
+}})
+
 fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
     headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
     contentType: 'application/json'
@@ -22,32 +41,13 @@ fetch("https://api.api-ninjas.com/v1/exercises?type=strength",{
     ddownEl2.appendChild(elemelon)
     console.log(ddownEl2)
 }})
+// ddBtn2.addEventListener('click', '#dropdown-item', function(ddownEl1){
+    //     console.log(data)
+    // })
+    // function listClickedResults(){
 
- fetch("https://api.api-ninjas.com/v1/exercises?type=cardio",{
-    headers: { 'X-Api-Key': 'QZMGE5WHwNHEyx4FFqOkdg==NkZXuWGPrCiOnGz8'},
-    contentType: 'application/json'
-}).then(function(res){
-    return res.json()
-}).then(function(data){
-    console.log(data)
-    const ddownEl1 = document.getElementById("dd1")
-   for(let i =0; i<data.length;i++){
-    const elemelon2 = document.createElement("li")
-     const ddBtn2 = document.createElement("button")
-     ddBtn2.className = "dropdown-item"
-    ddBtn2.id = "0" + [i]
-    ddBtn2.innerText = data[i].name;
-    elemelon2.appendChild(ddBtn2)
-    ddownEl1.appendChild(elemelon2)
-    console.log(ddownEl1)
-    
-   }
-})
+    // }
 // const el = document.createElement('div').classList.add('foo');
-
-
-trim
-
 // function isolateproperties(data)
 
 // make button a variable to use in JS
@@ -70,18 +70,25 @@ fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`,
 const invisibleResultsEl= document.getElementById('results')
 const resultsButtonEl = document.getElementById("workout-results")
 
-function disappear(){
-    invisibleResultsEl.style.display = 'none'
+// function disappear(){
+//     invisibleResultsEl.style.display = 'none'
+// }
+function mySelectValue(){
+    document.getElementById('')
 }
-resultsButtonEl.addEventListener('click', disappear)
-addEventListener 
-if  (disappear = true){
+
     function appear(){
+    const footerResults =document.getElementById('footer')
     const displayedResults = document.createElement('div')
     displayedResults.id = 'addedResults'
     displayedResults.className = 'border border-dark rounded'
-    
-    }
-}
+    footerResults.appendChild(displayedResults)
+    const ulResults = document.createElement('ul')
+    const liResults = document.createElement('li')
+    displayedResults.appendChild(ulResults)
+    ulResults.appendChild(liResults)
 
+    }
+
+    resultsButtonEl.addEventListener('click', appear)
 
