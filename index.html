@@ -103,22 +103,25 @@
     </main>
     <footer>
       <div class=" border border-dark rounded" id="results">
-        <p class="Visible body">
+        <p class="Visible-body" id="footerP">
           Display Workout Results
         </p>
         <button type="button" class=" btn btn-primary" id="workout-results"> Workout Results</button>
         <section id="WoResult1">Random workout results</section>
       </div>
-      <input type="text" id="searchInput">
-      <button id="searchButton">Search</button>
+      <section class=" border border-dark rounded" id="sectionResults">
+        <div class="d-none" id= "endurance">
 
-      <div class="d-none" id= "endurance">
+        </div>
+        <div class="d-none" id = "strength">
 
+        </div>
+      </section>
+      <div>
+        <input type="text" id="searchInput">
+        <button id="searchButton">Search</button>
       </div>
-      <div id = "strength">
-
-      </div>
-
+    
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./assets/script/script.js"></script>  

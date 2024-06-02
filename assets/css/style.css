@@ -35,10 +35,14 @@ li {
 footer{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+  
 }
 
-footer p{
+#footerP{
    margin-left: 10px;
+
 }
 
 #results{
@@ -60,7 +64,12 @@ div #workout-results{
     font-size: smaller;
     display: inline-block; /* or float: right; */
 }
-
+#sectionResults{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#searchInput{
+}
 #endurance{
 
 }
