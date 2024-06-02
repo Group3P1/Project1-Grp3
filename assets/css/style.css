@@ -1,8 +1,8 @@
 .Page-logo{
-    font-family: "Caveat", cursive;
-    font-weight: 400;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-size: 25px;
+    
     color: rgb(38, 121, 216);
     text-shadow: 2px 3px #080808;
     /* border: 5px solid rgb(68, 66, 66); */
@@ -11,8 +11,10 @@
     text-align: center;
     width: fit-content;
     font-optical-sizing: auto;
+    font-size: 125px;
 }
 
+ 
 main{
     display: flex;
     justify-content: space-evenly; 
@@ -87,8 +89,8 @@ margin-left: 1%;
 
 }
 #GitFitNav img {
-    width: 100px;
-    height: 75px;
+    height: auto;
+    width: 75px;
 }
 
 #GitFitNav h3 {
