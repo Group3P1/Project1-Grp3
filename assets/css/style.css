@@ -1,3 +1,49 @@
+.Page-logo {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: fit-content;
+    color: rgb(38, 121, 216);
+    text-shadow: 3px 3px #080808;
+    padding: 30px;
+    background: white;
+    text-align: center;
+    width: fit-content;
+    font-optical-sizing: auto;
+
+}
+#GitFitNav {
+    background: rgb(251, 253, 253);
+    border: solid gray;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0%;
+    
+}
+#GitFitNav img {
+        height: auto;  
+        width: 75px;
+ }
+    
+#GitFitNav h3 {
+        margin-left: 5%;
+        /* border: 2px solid rgb(188, 181, 181); */
+        padding-top: 30px;
+        text-align: center;
+        width: fit-content;
+        max-height: fit-content;
+}
+    
+#RdmWO {
+        max-height: fit-content;
+        display: flex;
+        align-content: center;
+        display: inline;
+        padding: 20px;
+        text-decoration-line: underline;
+        font-size: large ;
+        font-weight: bold;
+}
 body {
     justify-content: center;
 }
@@ -6,66 +52,68 @@ header {
     display: inline;
 }
 
-.Page-logo {
-    width: fit-content;
-    font-family: "Jaro";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20pt;
-    color: rgb(38, 121, 216);
-    text-shadow: 4px 5px #080808;
-    padding: 10px;
-    
-}
-
-
-main{
+main {
+    padding-top: 15px;
+    padding-left: 160px;
+    flex-grow: 1;
     display: flex;
-    justify-content: space-evenly; 
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 3px solid #080808;
+    
 } 
 
 .endurance {
     height: auto;
     width: 400px;
-    border-width: 5px 5px;
-    border-style: outset;
-    
+    /* border-width: 5px 5px;
+    border-style: outset; */
+    justify-content: space-evenly;
 }
 
-.strength{
+section.endurance {
+    text-align: center;
+}
+
+.strength {
     height: auto;
     width: 400px;
-    border-width: 5px 5px;
-    border-style: outset;
+    /* border-width: 5px 5px;
+    border-style: outset; */
+    justify-content: space-evenly;
 }
-img {
+
+section.strength {
+    text-align: center;
+}
+
+main img {
     display: block;
     align-content: center;
-    width: 280px;
-    height: 250px;
-}
+    width: 400px;
+    height: 300px;
+} 
 
 li {
     list-style-type: none;
 }
 
-
 footer{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-top: 30px;
-  
+    margin-bottom: 15px;
 }
 
 #footerP{
    margin-left: 10px;
-
+   padding-top: 3px;
 }
 
 #results{
     width: 200px;
-    height: 100px;
+    height: 125px;
 }
 
 div #workout-results{
@@ -78,18 +126,33 @@ div #workout-results{
     float: right
 }
 
+#WoResult1 {
+    padding-top: 5px;
+    text-align: center;
+}
+
 .small-text {
     font-size: smaller;
     display: inline-block; /* or float: right; */
 }
 
-#sectionResults{
+#sectionResults {
+    display: flex;
+    justify-content: center;
     border: 2px solid black;
     border-radius: 5px;
 }
-#searchInput{
-}
-#endurance{
 
+/* .searchInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    
+} */
+#searchInput {
+    flex-direction: column;
+ 
 }
 
