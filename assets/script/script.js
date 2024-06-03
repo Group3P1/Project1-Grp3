@@ -64,7 +64,7 @@ const strengthSelection = function(){
             const elemelon = document.createElement("li")//creates list element within dropdown for each workout
             const ddBtn = document.createElement("button")//button containing list element 
             ddBtn.className = "dropdown-item"//add bootstrap styling to injected list/button
-            ddBtn.id = [i] //assigns an unique id to the button 
+            ddBtn.id = "0" + [i] //assigns an unique id to the button 
             ddBtn.innerText = data[i].name; //displays name of workout on dropdown button
             elemelon.appendChild(ddBtn) 
             ddownEl2.appendChild(elemelon)
