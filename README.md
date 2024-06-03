@@ -22,4 +22,4 @@ As a user I would like to go to a webpage to search for a variety of wokrout and
    Page loading the "random workout button" tab showing the selection of the drop down menu. The user can then select which items intrigue them and then the results are then displayed in a results section as can be seen at the bottom of the page.
 ## Deployed Website Link
 ### link: 
-http://127.0.0.1:5501/Project1-Grp3/index.html
+https://group3p1.github.io/Project1-Grp3/
