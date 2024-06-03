@@ -137,21 +137,22 @@ div #workout-results{
 }
 
 #sectionResults {
-    
+    display: flex;
+    justify-content: center;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-.searchInput {
+/* .searchInput {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 150px;
     height: 40px;
     
-}
+} */
 #searchInput {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+ 
 }
 
