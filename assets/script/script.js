@@ -112,7 +112,7 @@ const searchButton = document.getElementById('searchButton');
 const getFood = function() 
 {
 
-    fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=(input)`, 
+    fetch(`https://trackapi.nutritionix.com/v2/search/instant/?query=hamburger`, 
     {
         'headers': {
             'Content-Type': 'application/json',
