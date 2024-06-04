@@ -6,7 +6,7 @@ const selectChangeHandler = function(instructions){
    const workoutResults = document.getElementById('endurance')
 
     const allWorkouts = document.createElement('p')
-    workoutResults.appendChild(allWorkouts)
+    workoutResults.appendChild(allWorkouts)// added the endurance to the displayed results
     allWorkouts.innerText = instructions
     // console.log(instructions)
     // console.log("hello")
@@ -34,7 +34,7 @@ const enduranceSelection = function(){
             const listItem = document.getElementById(ddBtn.id)
             const selectedData = data[i].instructions
             listItem.addEventListener('click', function(){
-                selectChangeHandler(selectedData)
+                selectChangeHandler(selectedData) // added event listener that takes the selected data and gives the user the instructions
             })
         }}
     )}
@@ -42,7 +42,7 @@ const enduranceSelection = function(){
 enduranceSelection()
 
 const selectChangeHandler2 = function(instructions){
-    const workoutResults = document.getElementById('strength')
+    const workoutResults = document.getElementById('strength') // gets the elements by ID that were selected and appends them to the elements in the HTML
  
      const allWorkouts = document.createElement('p')
      workoutResults.appendChild(allWorkouts)
@@ -74,7 +74,7 @@ const strengthSelection = function(){
             const listItem = document.getElementById(ddBtn.id)
             const selectedData = data[i].instructions
             listItem.addEventListener('click', function(){
-                selectChangeHandler(selectedData)
+                selectChangeHandler(selectedData)// listens for the click to display the instructions of the of the selected workouts.
             })
            
            
@@ -87,17 +87,18 @@ strengthSelection()
 
 
 
-//button disappear and then appears the results (in progress)
+//button disappear and then appears the results 
 const invisibleResultsEl= document.getElementById('results')
 const resultsButtonEl = document.getElementById("workout-results")
 
+// the function for appear to adhere it to the hidden results 
 function appear(){
     invisibleResultsEl.style.display = 'none'
     const workoutResults = document.getElementById('endurance')
     workoutResults.className ='d-block'
     
 }
-
+// event listener to display the results when the button is clicked
 resultsButtonEl.addEventListener('click', appear)
 
 // function appear(){
